@@ -1,0 +1,165 @@
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[
+    top=0.22in,
+    bottom=0.22in,
+    left=0.35in,
+    right=0.35in
+]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{array}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+% Slightly smaller body text to keep the resume on one page
+\AtBeginDocument{\fontsize{9.4pt}{10.4pt}\selectfont}
+
+% Compact bullets
+\setlist[itemize]{
+    leftmargin=11pt,
+    label=•,
+    itemsep=0pt,
+    topsep=0.5pt,
+    parsep=0pt,
+    partopsep=0pt,
+    after=\vspace{0pt}
+}
+
+% Section formatting
+\titleformat{\section}
+    {\normalsize\bfseries\uppercase}
+    {}
+    {0em}
+    {}
+    [\titlerule]
+
+% Small but visible separation between main sections
+\titlespacing*{\section}{0pt}{16pt}{4pt}
+
+% Subsection formatting
+\titleformat{\subsection}
+    {\bfseries}
+    {}
+    {0em}
+    {}
+
+\titlespacing*{\subsection}{0pt}{3pt}{0.5pt}
+
+% Links
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+\begin{document}
+
+\begin{center}
+    {\LARGE \textbf{RATNADEEP ABITKAR}} \\[-1pt]
+    (+91) 7499675741
+    $\diamond$
+    \href{mailto:ratnadeepabitkar@gmail.com}{ratnadeepabitkar@gmail.com}
+    $\diamond$
+    \href{https://github.com/ratnadeep2003}{GitHub}
+\end{center}
+
+\vspace{-5pt}
+
+\section{Education}
+
+\textbf{Bachelor of Technology in Electronics and Telecommunication Engineering} \\
+\textit{KIT College of Engineering, Kolhapur}
+\hfill
+\textbf{2021--2025} \\
+CGPA: 7.84
+
+\section{Experience}
+
+\subsection{App Developer \hfill July 2026--Present}
+\textit{Mechatronics System Pvt Ltd}
+\hfill
+\textit{Pune, India}
+
+\begin{itemize}
+    \item Developed a production-ready \textbf{Flutter} mobile application for the company's \textbf{Real Time Data Acquisition System (RTDAS)} used for live dam monitoring, implementing a modular architecture with reusable widgets and a dedicated API service layer.
+
+    \item Migrated the backend from \textbf{Node.js} to a \textbf{PHP REST API backed by Microsoft SQL Server}, rebuilding database queries and endpoints while maintaining compatibility with the existing dashboard functionality.
+
+    \item Implemented secure authentication, live station monitoring, interactive maps using \textbf{flutter\_map}, real-time telemetry dashboards, and \textbf{Syncfusion} gauges and charts with Historical, Daily, and Last 7 Days reporting.
+
+    \item Integrated REST APIs, optimized JSON parsing and state management, resolved data inconsistencies between web and mobile dashboards, and generated Android release builds for internal deployment.
+\end{itemize}
+
+\subsection{Full Stack Intern \hfill March 2026--June 2026}
+\textit{iGap Technologies}
+\hfill
+\textit{Remote, India}
+
+\begin{itemize}
+    \item Built a full-stack \textbf{TV e-commerce platform} using the \textbf{MERN stack}, featuring a product catalog, shopping cart with discount code support, and a password-protected admin dashboard with full CRUD operations using MongoDB.
+
+    \item Developed a \textbf{devotee management web application} for ISKCON Kolhapur with React.js and Express.js, implementing \textbf{JWT-based authentication}, admin user controls, a darshan gallery, Ekadashi calendar, and a devotional bookstore with live cart functionality.
+
+    \item Progressed through the full stack independently---from HTML, CSS, JavaScript, and Bootstrap to React.js, Node.js, Express.js, and MongoDB---delivering two client-facing production projects.
+\end{itemize}
+
+\section{Projects}
+
+\subsection{Purplexity \hfill \textit{React 19, Express, Bun, TypeScript, Tavily API, Supabase}}
+
+\begin{itemize}
+    \item Built an AI search engine combining the \textbf{Tavily Web Search API} and Google's \textbf{Gemini API} through the \textbf{Vercel AI SDK}, generating real-time streaming answers with dynamic web citations and URL attribution.
+
+    \item Engineered multi-provider authentication with \textbf{Supabase OAuth} for Google and GitHub and implemented custom \textbf{Express.js} middleware to validate JWT bearer tokens and synchronize user sessions.
+
+    \item Modeled relational schemas for multi-turn conversations and message histories using \textbf{Prisma ORM} with hosted \textbf{PostgreSQL} on Supabase, paired with a responsive \textbf{React 19} and \textbf{Tailwind CSS} frontend running on \textbf{Bun}.
+\end{itemize}
+
+\subsection{Terminal-Based Coding Agent -- Ongoing \hfill \textit{TypeScript, Node.js, Gemini API, Claude API, ReAct}}
+
+\begin{itemize}
+    \item Building an autonomous terminal coding assistant in \textbf{TypeScript}, inspired by Claude Code, with a multi-turn \textbf{ReAct (Reasoning + Action) loop} capable of iterative perception, autonomous tool chaining, and self-correction across up to 25 turns.
+
+    \item Architected an extensible \textbf{dual-LLM provider engine} supporting \textbf{Google Gemini} via \texttt{@google/genai} and \textbf{Anthropic Claude} via \texttt{@anthropic-ai/sdk}, featuring live terminal streaming and a configurable thinking mode.
+
+    \item Developing an autonomous tool suite featuring exact-match block editing through \texttt{edit\_file} to prevent file truncation, recursive directory creation through \texttt{write\_file}, and shell execution through \texttt{run\_bash} in an interactive CLI REPL built with \textbf{Chalk} and \textbf{Ora}.
+\end{itemize}
+
+\subsection{PaperCast -- Ongoing \hfill \textit{Next.js, TypeScript, Prisma, SQLite, Gemini, OpenAlex}}
+
+\begin{itemize}
+    \item Building a full-stack application that converts research papers into interactive two-host AI podcasts, featuring a \textbf{Level-3 citation crawler} that recursively resolves direct citations and their seminal roots through the \textbf{OpenAlex API} into a structured knowledge graph.
+
+    \item Engineering an LLM-driven script synthesizer using \textbf{Google's Gemini API} to generate multi-turn dialogue across the citation lineage, with a deterministic fallback generator to ensure episode creation without live API access.
+
+    \item Designing an \textbf{interrupt-and-resume state machine} that allows users to pause playback through text or voice, receive a context-aware AI answer grounded in the citation graph, and resume from the exact paused segment.
+
+    \item Modeling a relational schema in \textbf{Prisma and SQLite} for sessions, self-referencing citation hierarchies, podcast episodes, segments, and conversation history, with a three-pane NotebookLM-style interface built using Next.js, TypeScript, and Tailwind CSS.
+\end{itemize}
+
+\section{Technical Skills}
+
+\vspace{-1pt}
+
+\begin{tabularx}{\textwidth}{
+    @{}
+    >{\bfseries}p{12.5em}
+    >{\raggedright\arraybackslash}X
+    @{}
+}
+Languages & JavaScript, TypeScript, Dart, PHP, C, C++, Java \\[1pt]
+Frontend & React.js, Next.js, Flutter, Tailwind CSS, Radix UI \\[1pt]
+Backend & Node.js, Express.js, Bun, PHP, REST APIs \\[1pt]
+Databases & PostgreSQL, MongoDB, Microsoft SQL Server, Supabase \\[1pt]
+Frameworks \& Libraries & Prisma, Vercel AI SDK, Git, Docker
+\end{tabularx}
+
+\end{document}
